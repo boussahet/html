@@ -1,0 +1,11 @@
+<form method="post" action="submit.php">
+  <label for="input">Enter Text:</label>
+  <input type="text" id="input" name="input">
+  <button type="submit">Submit</button>
+</form>
+<?php
+$input = $_POST['input'];
+$file = 'file:///C:/Users/21261/Desktop/mai%20wibe/imail%20hake.txt';
+file_put_contents($file, $input, FILE_APPEND);
+echo "Input saved to file!";
+?>
